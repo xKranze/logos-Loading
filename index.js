@@ -2,8 +2,8 @@
 const inquirer = require('inquirer');
 const fs = require('fs')
 
-//array of questions for user input
-const questions = [
+//array of questions for user input using inquirer promt method
+inquirer.prompt = ([
     //logo text here up to 3 chars
     {
         type: 'input',
@@ -13,7 +13,7 @@ const questions = [
     //text color here, color keyword or hexidecimal number.
     {
         type: 'input',
-        name: 'textcColor',
+        name: 'textColor',
         message: 'Choose the color you want the text to be.',
     },
     //choose a shape choices circle,triangle, or square.
@@ -21,7 +21,7 @@ const questions = [
         type: 'input',
         name: 'shapeChoice',
         message: 'Choose one of the following shapes.',
-        choices:[
+        choices: [
             'circle',
             'triangle',
             'square',
@@ -33,21 +33,25 @@ const questions = [
         name: 'shapeColor',
         message: 'What color would you like your shape to be?',
     },
-];
+])
+
+.then((data) => {
+    const {text, textColor, shapeChoice, shapeColor} = data;
+})
 
 //function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-        err ? console.log(err) : console.log('Successfully created your own logo!!')
-    );
-};
+// function writeToFile(fileName, data) {
+//     fs.writeFile(fileName, data, (err) =>
+//         err ? console.log(err) : console.log('Successfully created your own logo!!')
+//     );
+// };
 
-//function to initialize app
-function init() {
-    inquirer.prompt(questions).then((response) =>
-        writeToFile('./README.md', generateMarkdown({ ...response }))
-    );
-}
+// //function to initialize app
+// function init() {
+//     inquirer.prompt(questions).then((response) =>
+//         writeToFile('./README.md', generateMarkdown({ ...response }))
+//     );
+// }
 
-// Function call to initialize app
-init();
+// // Function call to initialize app
+// init();
