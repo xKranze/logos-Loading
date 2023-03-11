@@ -1,14 +1,16 @@
 //packages needed for this application
 const inquirer = require('inquirer');
-const fs = require('fs')
+const fs = require('fs');
+const generateLogo = require('./lib/shapes.js');
 
 //array of questions for user input using inquirer promt method
 inquirer.prompt = ([
     //logo text here up to 3 chars
     {
-        type: 'input',
+        type: 'maxlength-input',
         name: 'text',
         message: 'Enter text for your logo here. (up to 3 characters)',
+        maxLength: 3
     },
     //text color here, color keyword or hexidecimal number.
     {
@@ -35,23 +37,8 @@ inquirer.prompt = ([
     },
 ])
 
-.then((data) => {
-    const {text, textColor, shapeChoice, shapeColor} = data;
-})
-
-//function to write README file
-// function writeToFile(fileName, data) {
-//     fs.writeFile(fileName, data, (err) =>
-//         err ? console.log(err) : console.log('Successfully created your own logo!!')
-//     );
-// };
-
-// //function to initialize app
-// function init() {
-//     inquirer.prompt(questions).then((response) =>
-//         writeToFile('./README.md', generateMarkdown({ ...response }))
-//     );
-// }
-
-// // Function call to initialize app
-// init();
+    .then((data) => {
+        fs.writeFile('logo.svg', generateLogo(data), (err) =>
+         err ? console.log(err) : console.log('Successfully created your own logo!!')
+     );
+    })
