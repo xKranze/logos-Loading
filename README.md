@@ -1,7 +1,8 @@
 # logos-Loading
 In this Node.js application the user will provide inputs and this app will spit out logos.  Simple as that!
-
-
+npm i inquirer@8.2.4
+npm install express
+npm i jest
 # 10 Object-oriented Programming: SVG Logo Maker
 
 ## Your Task
