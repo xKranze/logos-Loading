@@ -26,7 +26,7 @@ inquirer.prompt([
         choices: [
             'circle',
             'triangle',
-            'square',
+            'square'
         ]
     },
     //color of the shape here.
@@ -37,7 +37,7 @@ inquirer.prompt([
     },
     //takes data and creates new file called logo.svg and calls generateLogo function
 ]).then((data) => {
-        fs.writeFile('logo.svg', Shapes.generateLogo(data), (err) =>
-         err ? console.log(err) : console.log('Successfully created your own logo!!')
-     );
-    })
+    fs.writeFile('logo.svg', Shapes.generateLogo(data), (err) =>
+        err ? console.log(err) : console.log('Successfully created your own logo!!')
+    );
+})
