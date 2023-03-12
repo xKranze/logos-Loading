@@ -48,7 +48,7 @@ Once these steps are completed run the index.js file to generate your logo!
 
 Please view the video demo link below to see how to use the application:
 
-<a href="placeholder">Logos-Loading Video Demo</a>
+<a href="https://drive.google.com/file/d/17rGyjYgjlbljOvE2zXsTiohXpGBTGLWH/view">Logos-Loading Video Demo</a>
 
     
 ![alt text](./lib/logogen.jpg)
