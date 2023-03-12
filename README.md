@@ -40,7 +40,7 @@ Please view the video demo link below to see how to use the application:
 
     
 ![alt text](./lib/logogen.jpg)
-
+![alt text](./lib/passedtest.jpg)
 
 
 ## Credits
