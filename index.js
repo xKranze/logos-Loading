@@ -1,10 +1,10 @@
 //packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateLogo = require('./lib/shapes.js');
+const Shapes = require('./lib/shapes.js');
 
 //array of questions for user input using inquirer promt method
-inquirer.prompt = ([
+inquirer.prompt([
     //logo text here up to 3 chars
     {
         type: 'maxlength-input',
@@ -20,7 +20,7 @@ inquirer.prompt = ([
     },
     //choose a shape choices circle,triangle, or square.
     {
-        type: 'input',
+        type: 'list',
         name: 'shapeChoice',
         message: 'Choose one of the following shapes.',
         choices: [
@@ -35,10 +35,9 @@ inquirer.prompt = ([
         name: 'shapeColor',
         message: 'What color would you like your shape to be?',
     },
-])
-
-    .then((data) => {
-        fs.writeFile('logo.svg', generateLogo(data), (err) =>
+    //takes data and creates new file called logo.svg and calls generateLogo function
+]).then((data) => {
+        fs.writeFile('logo.svg', Shapes.generateLogo(data), (err) =>
          err ? console.log(err) : console.log('Successfully created your own logo!!')
      );
     })
