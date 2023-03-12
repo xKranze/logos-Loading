@@ -3,7 +3,16 @@
 ## Description 
   
 In this Node.js application the user will provide inputs and this app will spit out logos for you.  Simple as that!
+
+-Choose your text up to 3 characters
+
+-Choose your text color.
+
+-Choose one of the 3 shapes to include.
+
+-Choose the color of the shapes.
   
+-Your logo is then generated into a .svg file.
 ## Table of Contents 
   
 - [Installation](#installation)
