@@ -33,6 +33,9 @@ npm i jest
 Once these steps are completed run the index.js file to generate your logo!
 
 ## Usage
+-Access application in terminal.
+
+-type "node index.js" to start.
 
 Please view the video demo link below to see how to use the application:
 
@@ -44,23 +47,26 @@ Please view the video demo link below to see how to use the application:
 
 
 ## Credits
-  
-NA
-  
-## License
+Node.js - https://nodejs.org/en/
 
-This project is licensed under the Apache 2.0 license.
+EXPRESS - https://expressjs.com/en/starter/installing.html
 
-https://www.apache.org/licenses/LICENSE-2.0.txt
+SVG Documentation - https://developer.mozilla.org/en-US/docs/Web/SVG
+
+Jest - https://jestjs.io/docs/getting-started
+
+Inquirer - https://www.npmjs.com/package/inquirer
+
+https://stackoverflow.com/
+
+UW BOOTCAMP COURSE
+
+Tutoring
 
 ## Features
 
-creates readme using user inputs.
-
-## Contributions
-
-N/A
+Creates a simple logo using inputs recieved from user.
 
 ## Tests
   
-N/A
+After ensuring jest is installed by running "npm i jest" in terminal.  Then type "npm test shapes.test.js" to run a test on the shape renders.
